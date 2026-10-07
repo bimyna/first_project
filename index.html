@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<HTML lan="EN">
+    <TITLE>MY FIRST PROJECT</TITLE>
+    <HEAD>
+        <meta name="decription" content="Personal portfolio">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="author" content="Stackforge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <STYLE>
+           BODY{
+            background-color:white;
+           }
+           #header{
+            width:100%;
+            position:fixed;
+            top:0;
+            right:0;
+            background-color:#000;
+            color:#fff;
+            font-weight:900;
+            font-size:19px;
+            text-shadow: 2px 2px 4px rgb(12, 12, 226);
+            padding:12px;
+            text-align:center;
+            display:flex;
+            z-index:7;
+            justify-content: space-between;
+            align-items:center;
+           }
+            /*header on small media */
+           @media (max-width:450px){
+            #header{
+            width:100%;
+            position:fixed;
+            top:0;
+            right:0;
+            background-color:#000;
+            color:#fff;
+            font-weight:900;
+            font-size:14px;
+            text-shadow: 2px 2px 4px rgb(12, 12, 226);
+            padding:12px;
+            text-align:center;
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+           }
+        }
+
+           #header p{margin:0 21px;
+              color:green;
+              font-weight:900;}
+           .nav{display:flex;
+                justify-content:flex-end;
+                gap:27px;
+            }
+           .nav a{text-decoration:none;
+            color:#fff;}
+           .nav :hover{color:green;
+            font-size:22px;}
+            #About{
+                margin-top:52px;
+                background-color:rgba(246, 241, 246, 0.2);
+                padding:3px 12px;
+                border-radius:8px;
+                color:rgba(0, 0, 255, 1);
+                position:relative;
+            }
+            #About::before {
+                content: "";
+                position:absolute;
+                inset:0;
+
+                background-image: url("pics/myselfie1.jpg");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position:center;
+                z-index: 0;
+                opacity:0.5;
+                
+            }
+           #About > *{
+            position:relative;
+            z-index:1;
+           }
+            .imgtxt{
+             display:flex;
+            }
+             #Skills{
+                margin:22px auto;
+                background-color:rgba(12,10,255,.2);
+                padding:3px 12px;
+                border-radius:8px;
+            }
+            h2{
+                font-size:24px;
+                text-transform:uppercase;
+                text-align:center;
+            }
+            #Projects{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                flex-wrap:wrap;
+                margin-top:22px;
+                background-color:rgba(12,10,255,.2);
+                padding:3px 12px;
+                font-weight:500;
+                border-radius:8px;         
+            }
+         
+            .Std-management{
+                padding:8px;
+                margin-top:8px;
+                border-radius:12px;
+                font-weight:800;
+                background-color:rgb(167, 188, 6);
+                position: relative;
+                overflow: hidden;
+            }
+            .Std-management::before {
+             content:"";
+             position:Absolute;
+             inset:0;
+             background-image:url("pics/stdman.jpg");
+             background-repeat:no-repeat;
+             background-size:cover;
+             background-position:center;
+             opacity:.05;
+             transform: rotate(15deg);
+            }
+            .Std-management > *{
+            position:relative;
+            z-index:1;
+           }
+            .Tech-list{
+                font-weight:700;
+                color:#eee;
+            }
+            .View-project{
+                background: linear-gradient(rgb(217, 255, 0) ,rgba(3, 3, 112, 0.58),rgb(4, 162, 4));
+                padding:9px;
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                border-radius:13px;
+                color:#fff;
+                width:124px;
+                margin:auto;
+            }
+            .Online-shopping{
+                margin-top:8px;
+                padding:8px;
+                font-weight:800;
+                border-radius:12px;
+                background-color:rgb(167, 188, 6);
+                position:relative;
+                overflow:hidden;
+
+            }
+            .Online-shopping::before {
+               content:"";
+                position:absolute;
+               inset:0;
+              background-image:url("pics/shopping1.jpg");
+               background-repeat:No-repeat;
+               background-size:Cover;
+              background-position:center;
+               opacity:.05;
+            }
+            .Online-shopping >*{
+                position:relative;
+                z-index:1;
+            }
+             .Expense-tracker{
+                margin-top:8px;
+                padding:8px;
+                font-weight:700;
+                border-radius:12px;
+                background-color:rgb(167, 188, 6);
+                position:relative;
+                overflow:hidden;
+            } 
+            .Expense-tracker::before{
+              content:"";
+              inset:0;
+              position:absolute;
+              background-image:url("pics/expense-t1.jpg");
+              background-repeat: no-repeat;
+              background-size:cover;
+              background-position:center;
+              opacity:.07;
+            }
+            .Expense-tracker >*{
+             position:relative;
+             z-index:1;
+            }
+            .Online-learning{
+                margin-top:8px;
+                padding:8px;
+                border-radius:12px;
+                background-color:rgb(167, 188, 6);
+                overflow:hidden;
+                position:relative;
+                font-weight:800;
+            }
+            .Online-learning::before{
+                content:"";
+                inset:0;
+                position:absolute;
+                background-image: url("pics/onlinelearning1.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity:.05;
+            }
+            .Online-learning >*{
+                position:relative;
+                z-index:1;
+            }
+             #Contact{
+                margin-top:22px;
+                background-color:rgba(12,10,255,.2);
+                padding:3px 12px;
+                border-radius:8px;
+            }
+            .social-m{
+                background-color:#fff;
+                padding:9px;
+                border-top:5px solid green;
+                border-left:3px solid blue;
+                margin:auto;
+                font-weight:900;
+                 border-radius:14px;
+                justify-content: center;
+                width:270px;
+                line-height: 1.9;
+                transition: 0.3 ease;
+            }
+            .other-socials{
+                justify-content:center;
+                display:flex;
+                gap:20px;
+            }
+            .other-socials p:hover{
+            font-size:18px;
+            border:1px solid #ddd;
+            border-radius:5px;
+            padding:1px 8px;
+            }
+            .ul-list{
+                display:block;
+                font-size:16px;
+                justify-content:center;
+                align-items:center;
+                margin:auto;
+            }
+            .ul-list li:hover{
+                background-color:#bbb ;
+                border-radius:6px;
+                font-size:18px;
+                padding:2px;
+                width:144px;
+            }
+            .Visitor-info{
+                background:radial-gradient(circle at bottom right,#03fa03,transparent 40%),
+                           linear-gradient(90deg,#560101,#436001,#11016b);
+                padding:8px;
+                color:#fff;
+                border-radius:8px;
+                margin-bottom:9px;
+
+            }
+            .form1{
+                margin-left:15px;
+            }
+            .form1 input{
+                background-color:#fff;
+                border-radius:8px;
+                border:1px solid blue;
+                height:33px;
+                margin:8px 0;
+                width:300px;
+            }
+            .form1 label{
+                font-weight:600;
+            }
+            .form1 input::placeholder{
+                text-align:center;
+            }
+            .form1 input[type="submit"]{
+                width:300px;
+                background:linear-gradient(90deg, gold,rgb(5, 252, 5));
+            }
+            #footer{
+                position:relative;
+                width:100%;
+                bottom:0;
+                right:0;
+                left:0;
+                background-color:#ddd;
+                color:#000;
+                padding:12px;
+                margin-top:8px;
+                display:flex;
+                justify-content:center;
+            }
+            .selfie1{
+                position:relative;
+                top:20px;
+                height:122px;
+                width:122px;
+                border-radius:7px;
+            }
+            .langimg{
+                height:120px;
+                width:290px;
+                display: block;
+                margin:auto;
+                border-radius:8px;
+                transform: rotate(5deg);
+                z-index:-5;
+                opacity:.6;
+}
+      .fltg-whatsapp-btn {
+      position:fixed;
+      bottom:20px;
+      right:25px;
+      z-index:3;
+      display:column;
+      }   
+      .floating-w-btn{
+       color:rgb(242, 246, 242);
+       width:80px;
+       height:80px;
+       font-size:40px;
+       background-color:rgb(6, 186, 6);
+       border-radius:50px;
+       display:flex;
+       align-items:center;
+       justify-content:center
+      }
+      .myimgs{
+        background-color:rgb(1, 1, 20);
+        border-radius:12px;
+        padding:8px;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+      }
+      .grade{
+        text-align: center;
+        justify-content:center;
+        color:#ccc;
+        padding:8px;
+        border:1px groove #222;
+        border-radius:8px;
+      }
+      .high{
+        text-align: center;
+        justify-content:center;
+        color:#ccc;
+        padding:8px;
+        border:1px groove #222;
+        border-radius:8px;
+      }
+      .univer{
+        text-align: center;
+        justify-content:center;
+        color:#ccc;
+        padding:8px;
+        border:1px groove #222;
+        border-radius:8px;
+      }
+      .seniorr{
+        text-align: center;
+        justify-content:center;
+        color:#ccc;
+        padding:8px;
+        border:1px groove #222;
+        border-radius:8px;
+      }
+      .free{
+        text-decoration:none;
+        background-color:rgb(206, 217, 9);
+        padding:10px;
+        text-decoration:none;
+        border-radius:11px;
+        color:#fff;
+        box-shadow:inset -2px -3px 4px rgb(85, 248, 3),
+        -2px -2px 4px #fff;
+      }
+        </STYLE>
+    </HEAD>
+    <BODY>
+        <!--my header here-->
+    <div id="header">
+        <p>BIMYNA</p>
+        <div class="nav">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
+        </div>
+    </div>
+  <section id="About">
+    <H1 style="text-align:center;color:rgb(210, 99, 8);">ABOUT ME.</H1>
+    <div class="imgtxt"><img src="pics/myselfie1.jpg" class="selfie1">
+    <p style="line-height:125%; margin-left:7px;">My name is <b>Christopher Maina</b>.Born in the year 2005.I am a christian.
+    Currently Pursuing a degree in Bachelor of computer science at Moi univeristy.
+    Having a skill of website development.I would like to be a pro Full stack developer and 
+    a professional trader.</p>
+    </div>
+    </section>
+
+    <section id="Skills">
+        <H2>SKILLS POSESSED</H2>
+        <p>Some skills that i posses in web development include:</p>
+        <ul class="ull-list">
+            <li>HTML -Hyper Text Mark Up language for designing contente of a page.</li>
+            <li>CSS -Cascading Style Sheets-For designing elements of an HTML.</li>
+            <li>Javascript- For  enhancing responsive layout of a page.</li>
+            <li>PHP -Hypertext preprocessor-Server-side language excecuted on the server.</li>
+            <li>My SQl- standard Query language -for creating and modifying database</li>
+        </ul>
+        <img src="pics/cjp.jpg" class="langimg">
+    </section>
+
+           <section id="Projects">
+                   <h3 style="text-align:center;grid-column: 1 /-1;">MY PROJECTS</h3>
+       <!--Project 1 student management system-->
+       <div  class="Std-management">
+        <p style="text-align:center;font-weight:900;text-transform:uppercase;">Student Management System</p>
+        <p style="margin:0 8px 6px 8px;">The system can be used to manage student infomation such as names, registration
+            ,numbers and academic records.</p>
+        <p style="margin:6px 12px;">Technologies: <span class="Tech-list">HTML ,CSS, Javascript ,PHP,MY SQL.</span></p>
+        <a href="http://localhost:8000/std-management.php" style="text-decoration:none;" target="_blank"><div class="View-project">View Project</div></a>
+       </div>
+    
+       <!--project 2 online shopping website-->
+       <div class="Online-shopping">
+        <p style="text-align:center;font-weight:900;text-transform:Uppercase;">Online Shopping Website</p>
+        <p style="margin:0 8px 6px 8px;">This system allows you to view products, See products prices, add products to cart  ,contact the seller and place orders.</p>
+        <p style="margin:6px 12px;">Technologies: <span class="Tech-list">HTML ,CSS, Javascript ,PHP,MY SQL.</span></p>
+        <a href="online-shopping.php" style="text-decoration:none;" target="_blank"><div class="View-project">View Project</div></a>
+       </div>
+
+       <!--project 3 Expense tracker-->
+       <div class="Expense-tracker">
+        <p style="text-align:center;font-weight:900;text-transform:uppercase;">Personal Expense Tracker</p>
+        <p style="margin:0 8px 6px 8px;">Here, a useer can record income, Expenses, Categories, Dates, Amounts.The system helps users undestand wher their money goes. </p>
+        <p style="margin:6px 12px;">Technologies: <span class="Tech-list">HTML ,CSS, Javascript ,PHP,MY SQL.</span></p>
+        <a href="online-shopping.php" style="text-decoration:none;" target="_blank"><div class="View-project">View Project</div></a>
+       </div>
+
+       <!--Project  4 Online Learning platform-->
+       <div class="Online-learning">
+        <p style="text-align:center;font-weight:900;text-transform:uppercase;">Online Learning Platform</p>
+        <p style="margin:0 8px 6px 8px;">Project for students who wants to Learn online.It contains Courses, Lessons, Study materials ,Quizzes and student progress.</p>
+        <p style="margin:6px 12px;">Technologies: <span class="Tech-list">HTML ,CSS, Javascript ,PHP,MY SQL.</span></p>
+        <a href="online-learning.php" style="text-decoration:none;" target="_blank"><div class="View-project">View Project</div></a>
+        </div>
+    </section>
+    <a href="https://wa.me/254758637909?text=Hello%20bimyna" target="_blank"><div class="fltg-whatsapp-btn">
+        <div class="floating-w-btn"><i class="fa-brands fa-whatsapp"></i></div>
+    </div></a>
+    <section id="Contact">
+        <div class="social-m">
+        <p  style="font-weight:900;font-size:19px;">Contact us through:</p>
+        <ul class="ul-list">
+        <li><i class="fa-brands fa-whatsapp" style="color:rgb(7, 252, 7);"></i> &nbsp;<a href="https://wa.me/254758637909?text=" style="text-decoration:none;color:black;" target="_blank"> Whatsapp</a> </li>
+        <li><i class="fa-solid fa-envelope" style="color:rgb(165, 165, 9)"></i><a href="mailto:theelatasha254@gmail.com" style="text-decoration:none;color:black;" target="_blank">&nbsp;  Gmail</a></li>
+        <li><a href="tel:+254758637909" style="text-decoration:none;color:blue;" target="_blank"> &#128222; Call</a></li>
+        </ul>
+        <div class="other-socials">
+            <p><a href="https://github.com/githubme" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+            <p><a href="https://www.tiktok.com/@bimyna7b" target="_blank"><i class="fa-brands fa-tiktok"  style="color:#000;"></i></a></p>
+            <p><a href="https://www.instagram.com/bimyna" target="_blank"><i class="fa-brands fa-instagram" target="_blank" style="color:rgb(212, 5, 5);"></i></a></p>
+            <p><a href="https://x.com/@theechris8946" target="_blank"><i class="fa-brands fa-x-twitter" style="color:black;"></i></a></p>
+            <p><a href="https://www.pinterest.com/users/latasha254" target="_blank"><i class="fa-brands fa-pinterest" style="color:red;"></i></a></p>
+            <p><a href="https://www.youtube.com/bimyna7b" target="_blank"><i class="fa-brands fa-youtube" style="color:red"></i></a></p>
+        </div>
+        </div>
+        <div class="Visitor-info">
+        <p style="text-align:center;font-weight:900;font-size:21px;">Visitor's info:</p>
+        <form action="/action.php" class="form1">
+            <label for="Name">Name:</label><br>
+            <input type="text" id="Name" name="Name" placeholder="input your full name"><br>
+
+            <label for="Email">Email:</label><br>
+            <input type="text" id="Email" name="Email" placeholder="Eg Johndoe@gmail.com"><br>
+
+            <label for="Message">Message:</label><br>
+            <input type="text" id="Message" name="message" placeholder="Write a message.."><br>
+
+            <input type="submit" value="submit">
+        </form>
+        </div>
+    </section>
+<div class="myimgs">
+    <div class="grade">
+        <p>This are my images from grade 1 to 8</p>
+        <p>unlock the images for free &dArr;</p>
+        <a href="grade.php" class="free">Unlock &#128274;</a>
+    </div>
+    <div class="high">
+        <p>This are my images from Form 1 to form 4 </p>
+    </div>
+
+    <div class="univer">
+        <p>This are my images In university from Year 1 to year 4</p>
+    </div>
+    <div class="seniorr">
+        <p>This are my images after completing my education</p>
+    </div>
+</div>
+    print(Hello  world)
+    <div id="footer">
+        &copy; 2026 ~Stackforge dev~
+    </div>
+    </BODY>
+</HTML>

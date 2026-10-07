@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <TITLE>Clock management </TITLE>
+        <style>
+           #demo{
+            border:2px solid #ccc;
+            padding:3px;
+            display:flex;
+            margin:Auto;
+            border-radius:8px;
+            border-top:9px solid #999;
+            border-right:10px solid #999;
+            background-color:black;
+            color:white;
+            font-weight:900;
+            font-size:29px;
+            width:200px;
+            justify-content:center;
+           }
+        </style>
+    </HEAD>
+    <body>
+        <H1>Bimyna's clock</H1>
+
+        <p>This clock system uses javascript to display time.</p>
+        <p id="demo"></p>
+        <script>
+            //timer
+            setInterval(myfunction,1000);
+            //callback function
+            function  myfunction(){
+                let date=new Date();
+              mydisplayer(date.toLocaleTimeString()); 
+            }
+            //function to display text in html
+            function mydisplayer(text){
+                let demo=document.getElementById("demo");
+                demo.innerHTML=text;
+            }
+        </script>
+    </body>
+</HTML>
